@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const userInput = document.getElementById('user-input');
   const chatBox = document.getElementById('chat-box');
   const themeSelect = document.getElementById('theme-select');
+  const landingScreen = document.getElementById('landing-screen');
+  const chatContainer = document.getElementById('chat-container');
+  const nextBtn = document.getElementById('next-btn');
 
   const conversation = [];
   const themeKey = 'chat-theme';
@@ -39,6 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initTheme();
+
+  if (nextBtn && landingScreen && chatContainer) {
+    nextBtn.addEventListener('click', () => {
+      landingScreen.classList.add('hidden');
+      chatContainer.classList.add('active');
+      userInput.focus();
+    });
+  }
 
   function formatModelText(text) {
     return String(text)

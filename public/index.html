@@ -7,29 +7,50 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="container">
-    <div class="top-bar">
-      <h1>Chatbot Layanan Pemerintah Kabupaten Aceh Jaya</h1>
-      <label class="theme-switch" for="theme-select">
-        <span>Tema</span>
-        <select id="theme-select">
-          <option value="auto">Ikuti sistem</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </label>
+  <main class="page-shell">
+    <section id="landing-screen" class="landing-screen">
+      <div class="landing-card">
+        <p class="landing-badge">Layanan Pemerintah Kabupaten Aceh Jaya</p>
+        <h1>Chatbot Layanan Digital</h1>
+        <p class="landing-text">Dapatkan jawaban cepat tentang layanan, informasi, dan kebutuhan administrasi dalam satu percakapan.</p>
+        <button id="next-btn" class="next-btn" type="button" aria-label="Lanjut ke chat">
+          <span>→</span>
+        </button>
+      </div>
+    </section>
+
+    <div id="chat-container" class="container chat-container">
+      <div class="window-bar">
+        <div class="window-controls">
+          <span class="window-dot red"></span>
+          <span class="window-dot yellow"></span>
+          <span class="window-dot green"></span>
+        </div>
+        <div class="window-title">Chatbot</div>
+      </div>
+      <div class="top-bar">
+        <h1>Chatbot Layanan Digital Pemerintah Kabupaten Aceh Jaya</h1>
+        <label class="theme-switch" for="theme-select">
+          <span>tema</span>
+          <select id="theme-select">
+            <option value="auto">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
+      </div>
+      <div id="chat-box" class="chat-box"></div>
+      <form id="chat-form" class="chat-form">
+        <textarea id="user-input" placeholder="Ketik pesan..." autocomplete="off" required></textarea>
+        <button type="submit" aria-label="Kirim pesan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2L11 13"></path>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+          </svg>
+        </button>
+      </form>
     </div>
-    <div id="chat-box" class="chat-box"></div>
-    <form id="chat-form" class="chat-form">
-      <textarea id="user-input" placeholder="Ketik pesan..." autocomplete="off" required></textarea>
-      <button type="submit" aria-label="Kirim pesan">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 2L11 13"></path>
-          <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-        </svg>
-      </button>
-    </form>
-  </div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
