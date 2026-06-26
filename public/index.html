@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemini AI Chatbot</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="top-bar">
+      <h1>Chatbot Layanan Pemerintah Kabupaten Aceh Jaya</h1>
+      <label class="theme-switch" for="theme-select">
+        <span>Tema</span>
+        <select id="theme-select">
+          <option value="auto">Ikuti sistem</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
+    <div id="chat-box" class="chat-box"></div>
+    <form id="chat-form" class="chat-form">
+      <textarea id="user-input" placeholder="Ketik pesan..." autocomplete="off" required></textarea>
+      <button type="submit" aria-label="Kirim pesan">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 2L11 13"></path>
+          <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+        </svg>
+      </button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
