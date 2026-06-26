@@ -19,7 +19,7 @@ const ai = new GoogleGenAI({
 // gemini-2.5-flash-lite
 // gemini-3.5-flash
 // gemini-3.1-flash-lite
-const GEMINI_MODEL = 'gemini-2.5-flash-lite';
+const GEMINI_MODEL = 'gemini-3.1-flash-lite';
 
 app.use(cors());
 app.use(express.json());
@@ -42,7 +42,7 @@ app.post('/api/chat', async (req, res) => {
             model: GEMINI_MODEL,
             contents,
             config: {
-                temperature: 1,
+                temperature: 0.9,
                 systemInstruction: `
                 Anda adalah asisten layanan diskominsa aceh jaya,
                 admin dari layanan-layanan digital pemerintah kabupaten aceh jaya,
