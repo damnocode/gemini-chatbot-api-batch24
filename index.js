@@ -19,7 +19,7 @@ const ai = new GoogleGenAI({
 // gemini-2.5-flash-lite
 // gemini-3.5-flash
 // gemini-3.1-flash-lite
-const GEMINI_MODEL = 'gemini-2.5-flash';
+const GEMINI_MODEL = 'gemini-3.1-flash-lite';
 
 app.use(cors());
 app.use(express.json());

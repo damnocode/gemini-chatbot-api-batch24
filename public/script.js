@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const landingScreen = document.getElementById('landing-screen');
   const chatContainer = document.getElementById('chat-container');
   const nextBtn = document.getElementById('next-btn');
+  const windowDots = document.querySelectorAll('.window-dot');
 
   const conversation = [];
   const themeKey = 'chat-theme';
@@ -43,13 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initTheme();
 
-  if (nextBtn && landingScreen && chatContainer) {
-    nextBtn.addEventListener('click', () => {
+  function showChat() {
+    if (landingScreen && chatContainer) {
       landingScreen.classList.add('hidden');
       chatContainer.classList.add('active');
       userInput.focus();
-    });
+    }
   }
+
+  function showLanding() {
+    if (landingScreen && chatContainer) {
+      landingScreen.classList.remove('hidden');
+      chatContainer.classList.remove('active');
+      userInput.blur();
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', showChat);
+  }
+
+  windowDots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      showLanding();
+    });
+  });
 
   function formatModelText(text) {
     return String(text)
